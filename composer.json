@@ -1,0 +1,20 @@
+{
+    "name": "Hostingpress/Wordpress",
+    "description": "Hostingpress: Wordpress",
+    "homepage": "http://wemakewp.com/",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4.0",
+        "wp-cli/wp-cli": "*"
+    },
+    "config": {
+        "process-timeout": 1800
+    },
+    "scripts": {
+        "post-install-cmd": [
+        	"./vendor/wp-cli/wp-cli/bin/wp core download --path=web"
+        ]
+    }
+}
