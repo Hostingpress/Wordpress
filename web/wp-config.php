@@ -1,6 +1,5 @@
 <?php
-defined ( 'DS' ) or define ( 'DS', DIRECTORY_SEPARATOR );
-require dirname ( __DIR__ ) . DS . 'hostingpress.php';
+require dirname ( __DIR__ ) . DIRECTORY_SEPARATOR . 'hostingpress.php';
 
 define ( 'DB_NAME', $site->DB_NAME );
 define ( 'DB_USER', $site->DB_USER );
@@ -19,5 +18,5 @@ define ( 'NONCE_SALT', $site->NONCE_SALT );
 $table_prefix = $site->DB_PREFIX;
 define ( 'WP_DEBUG', $site->WP_DEBUG );
 if (! defined ( 'ABSPATH' ))
-	define ( 'ABSPATH', dirname ( __FILE__ ) . '/' );
+	define ( 'ABSPATH', dirname ( __FILE__ ) . DS );
 require_once (ABSPATH . 'wp-settings.php');

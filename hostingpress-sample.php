@@ -1,10 +1,11 @@
 <?php
-defined ( 'HOSTINGPRESS_ROOT' ) or define ( 'HOSTINGPRESS_ROOT', '/var/www/yourdomain.com/public_html/' );
+defined ( 'DS' ) or define ( 'DS', DIRECTORY_SEPARATOR );
+defined ( 'HOSTINGPRESS_ROOT' ) or define ( 'HOSTINGPRESS_ROOT', DS . 'var' . DS . 'www' . DS . 'yourdomain.com' . DS . 'public_html' . DS );
 
-require (HOSTINGPRESS_ROOT . 'vendor/autoload.php');
-require (HOSTINGPRESS_ROOT . 'vendor/yiisoft/yii2/Yii.php');
+require (HOSTINGPRESS_ROOT . 'vendor' . DS . 'autoload.php');
+require (HOSTINGPRESS_ROOT . 'vendor' . DS . 'yiisoft' . DS . 'yii2' . DS . 'Yii.php');
 
-$config = require (HOSTINGPRESS_ROOT . 'config/web.php');
+$config = require (HOSTINGPRESS_ROOT . 'config' . DS . 'web.php');
 
 $yii = new yii\web\Application ( $config );
 if (! $site = Yii::$app->wordpress->check ()) {
