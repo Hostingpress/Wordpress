@@ -1,7 +1,4 @@
 <?php
-// comment out the following two lines when deployed to production
-defined ( 'YII_DEBUG' ) or define ( 'YII_DEBUG', true );
-defined ( 'YII_ENV' ) or define ( 'YII_ENV', 'dev' );
 defined ( 'DS' ) or define ( 'DS', DIRECTORY_SEPARATOR );
 
 defined ( 'HOSTINGPRESS_ROOT' ) or define ( 'HOSTINGPRESS_ROOT', '/home/wemakewp/web/wemakewp.com/public_html/' );
