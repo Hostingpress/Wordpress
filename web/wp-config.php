@@ -16,7 +16,10 @@ define ( 'SECURE_AUTH_SALT', $site->SECURE_AUTH_SALT );
 define ( 'LOGGED_IN_SALT', $site->LOGGED_IN_SALT );
 define ( 'NONCE_SALT', $site->NONCE_SALT );
 $table_prefix = $site->DB_PREFIX;
-define ( 'WP_DEBUG', $site->WP_DEBUG );
+define ( 'WP_DEBUG', false /* $site->WP_DEBUG */ );
 if (! defined ( 'ABSPATH' ))
 	define ( 'ABSPATH', dirname ( __FILE__ ) . DS );
+if (! defined ( 'UPLOADS' ))
+	define ( 'UPLOADS', 'wp-content' . DS . 'uploads' . DS . $site->domain );
+Yii::$app = null;
 require_once (ABSPATH . 'wp-settings.php');

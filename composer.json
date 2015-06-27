@@ -13,7 +13,7 @@
         "process-timeout": 1800
     },
     "scripts": {
-        "post-install-cmd": [
+        "pre-install-cmd": [
         	"./vendor/wp-cli/wp-cli/bin/wp core download --path=web"
         ]
     }
