@@ -8,6 +8,6 @@ require (HOSTINGPRESS_ROOT . 'vendor' . DS . 'yiisoft' . DS . 'yii2' . DS . 'Yii
 $config = require (HOSTINGPRESS_ROOT . 'config' . DS . 'web.php');
 
 $yii = new yii\web\Application ( $config );
-if (! $site = Yii::$app->wordpress->check ()) {
+if (! $site = Yii::$app->wordpress->check ( PHP_SAPI != 'cli' )) {
 	Yii::$app->wordpress->notFound ();
 }
